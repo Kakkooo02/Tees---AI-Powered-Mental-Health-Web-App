@@ -1,0 +1,57 @@
+/* Global Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Body Styling */
+  body {
+    background-color: black;
+    color: white;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  /* Centered Sign Up Container */
+  .signin-container {
+    max-width: 400px;
+    width: 90%;
+    background-color: rgba(0, 0, 0, 0.4);
+    margin: 200px 570px;           /* Auto centers horizontally; 50px top/bottom margin */
+    padding: 30px;               /* Add internal spacing */
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Input Fields */
+  .signin-container input {
+    display: block;
+    width: 100%;
+    padding: 12px;               /* Extra padding for a roomier feel */
+    margin: 12px 0;              /* More spacing between form fields */
+    background: transparent;
+    border: 2px solid #7f00ff;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;          /* Soften the corners of the input fields */
+  }
+  
+  /* Sign Up Button */
+  .signin-container button {
+    background: linear-gradient(90deg, #7f00ff, #e100ff);
+    color: white;
+    font-size: 18px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0px 4px 15px rgba(127, 0, 255, 0.8);
+  }
+  
+  /* Button Hover Effect */
+  .signin-container button:hover {
+    box-shadow: 0px 6px 25px rgba(225, 0, 255, 1);
+    transform: scale(1.05);
+  }

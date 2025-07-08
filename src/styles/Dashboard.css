@@ -1,0 +1,178 @@
+/* Global Body Styling */
+body {
+    background: linear-gradient(135deg, #171717, #130336, #2c0548);
+    color: white;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    text-align: center;
+    position: relative; /* Enables absolute positioning for header elements */
+}
+
+/* Dashboard Container Background Blobs */
+.dashboard-container::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 600px;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(ellipse at center, #000000, #000000, #000000, #800080, #00ff009c, #00ff006f);
+    opacity: 0.5;
+    border-radius: 40% 70% 50% 50% / 60% 50% 70% 40%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+body.dashboard-container::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(#000000, #00000058, #2121213e, #32313139);
+    border-radius: 40% 70% 50% 50% / 60% 80% 90% 50%;
+    z-index: -0.3;
+    pointer-events: none;
+}
+
+/* Header Elements */
+/* App Name at Top Left */
+.app-name {
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: left;
+    text-shadow: 0px 0px 15px rgba(127, 0, 255, 0.8);
+}
+
+/* Logout Button at Top Right */
+.logout-btn {
+    top: 12px;
+    right: 30px;
+    background: transparent;
+    border: 2px solid #550655;
+    color: white;
+    padding: 8px 12px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.logout-btn:hover {
+    background: white;
+    color: #380438;
+}
+
+.setting-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Settings Button at Top Right */
+.setting-btn {
+    margin-top: 10px;
+    margin-left: 1300px;
+    background: transparent;
+    border: none;
+    padding: 8px 12px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+/* Dashboard Buttons Container */
+.buttons-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    margin-top: 120px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Base Round Dashboard Buttons */
+/* Base Round Dashboard Buttons */
+.dashboard-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    color: white;
+    box-shadow: 0px 0px 10px rgba(50, 0, 80, 0.5);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background: none;
+}
+
+/* Background image via ::before */
+.dashboard-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0; /* Keep the background at the lowest layer */
+}
+
+/* Black overlay sheet via ::after */
+.dashboard-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    background: rgba(15, 1, 37, 0.781);
+    opacity: 0.80; /* Ensure transparency for better text visibility */
+    z-index: 1; /* Keep overlay below the text */
+}
+
+/* Button text styling */
+.dashboard-btn span,
+.dashboard-btn .btn-text {
+    position: relative;
+    z-index: 2; /* Ensures text is above both ::before and ::after */
+    color: rgb(251, 250, 250); /* Explicitly set the text color */
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8); /* Shadow boosts legibility */
+}
+
+/* Hover Effect */
+.dashboard-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 20px rgba(199, 170, 199, 0.7);
+}
+
+/* Specific Background Images for Each Button using nth-child */
+.buttons-grid .dashboard-btn:nth-child(1)::before {
+    background-image: url("https://malstees9d92.blob.core.windows.net/images/mood-tracker.png?sp=r&st=2025-04-27T16:56:46Z&se=2025-04-30T19:56:46Z&sv=2024-11-04&sr=b&sig=lDAJjwDYyKlE41Tab0EK%2BatdYnuOycTeeCwl0uew8Oc%3D");
+}
+
+.buttons-grid .dashboard-btn:nth-child(2)::before {
+    background-image: url("https://malstees9d92.blob.core.windows.net/images/ai-chat.png?sp=r&st=2025-04-27T16:58:22Z&se=2025-04-30T19:59:59Z&sv=2024-11-04&sr=b&sig=qNos2gs8Sn58yJfHki7yOhxiedGqgjsFxB0tPW%2B5kAg%3D");
+}
+
+.buttons-grid .dashboard-btn:nth-child(3)::before {
+    background-image: url("https://malstees9d92.blob.core.windows.net/images/Excerise.png?sp=r&st=2025-04-27T16:59:15Z&se=2025-04-30T19:59:59Z&sv=2024-11-04&sr=b&sig=gFr8r0onoULlwcplf0mxZPVo%2FQNkVtouKs0hLVlEvTM%3D");
+}

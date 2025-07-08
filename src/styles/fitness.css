@@ -1,0 +1,57 @@
+.fitness-container {
+    position: relative;
+    overflow: hidden;
+    padding: 20px 0; /* Reduced padding to reduce space */
+    background: linear-gradient(to bottom, #000, #0b0517 20%, #200D42 34%, #4F21A1 65%);
+    color: white;
+    /* Removed min-height to avoid forcing full viewport height */
+  }
+  
+  .fitness-overlay {
+    position: absolute;
+    top: calc(100% - 50px); /* Adjusted to bring the overlay up */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200%; /* Adjusted width to 100% of the container's width */
+    height: 350px; /* Adjusted height to fit better */
+    border-radius: 100%;
+    background: radial-gradient(closest-side, #000 82%, #9560EB);
+    border: 1px solid #B48CDE;
+    z-index: 0;
+  }
+  
+  .fitness-content {
+    position: relative;
+    padding: 0 1rem;
+    margin: 0 auto;
+    max-width: 1200px;
+    text-align: center;
+  }
+  
+  .fitness-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-top: 1rem; /* Reduced margin-top to reduce space */
+  }
+  
+  .fitness-greeting {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 1rem; /* Reduced margin-top to reduce space */
+  }
+  
+  .fitness-gradient-text {
+    background: linear-gradient(to right, #ec4899, #a855f7, #38bdf8, #22d3ee);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .fitness-subtext {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    margin-top: 0.5rem; /* Reduced margin-top to reduce space */
+    margin-bottom: 2rem; /* Added margin-bottom to create space between the subtext and the overlay */
+    }

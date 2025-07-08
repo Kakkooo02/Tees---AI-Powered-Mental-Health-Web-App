@@ -1,0 +1,138 @@
+/* Global styles (ensuring html & body allow page scrolling) */
+html, body {
+  margin: 0;
+  padding: 0;
+  /* Allow the document to grow naturally */
+  height: auto;
+  overflow-y: visible;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Recommendations container: No fixed height so content drives the scroll */
+.recommendations-container {
+  background: linear-gradient(to bottom, #000000, #5D2CA8);
+  color: white;
+  padding: 62px 0;
+  /* Remove fixed height for natural growth */
+  /* height: 100vh; */
+  /* If you need a minimum height, uncomment the next line */
+  /* min-height: 100vh; */
+}
+
+/* Center and constrain the content */
+.recommendations-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Grid of recommendations with responsive columns */
+.recommendations-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 640px) {
+  .recommendations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .recommendations-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Styling for individual recommendation cards */
+.recommendation-card {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(128, 90, 213, 0.5);
+  transition: box-shadow 0.3s ease;
+  position: relative;
+}
+
+.recommendation-card:hover {
+  box-shadow: 0 8px 16px rgba(128, 90, 213, 0.8);
+}
+
+/* Image container and image */
+.recommendation-image-container {
+  position: relative;
+}
+
+.recommendation-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+/* Overlay gradient for image */
+.recommendation-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #000, transparent);
+  opacity: 0.4;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+/* Content styling for each recommendation */
+.recommendation-content {
+  padding: 1rem;
+  position: relative;
+  z-index: 10;
+}
+
+.recommendation-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.recommendation-info {
+  font-size: 0.875rem;
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+/* Button wrapper and styling */
+.recommendation-button-wrapper {
+  padding-top: 0.5rem;
+}
+
+.recommendation-button {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  width: 80px;
+  border-radius: 8px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  background: linear-gradient(to bottom left, #2e0854, #6a0dad);
+  border: 1px solid #b48cde;
+  transition: background 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+  font-size: medium;
+}
+
+.recommendation-button:hover {
+  background: linear-gradient(to top right, #2e0854, #6a0dad);
+  transform: scale(1.05);
+}
+
+/* Message style if no workouts are found */
+.no-workouts-message {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 1.125rem;
+  margin-top: 2.5rem;
+}
