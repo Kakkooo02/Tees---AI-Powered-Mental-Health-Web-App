@@ -20,7 +20,6 @@ This project was built to explore how generative AI can be used in a web applica
 * Chat history storage using Azure Cosmos DB
 * Mood tracking support
 * Workout and fitness recommendation features
-* CORS configuration for frontend-backend communication
 * Cloud database integration
 * Multiple frontend pages for dashboard, chatbot, mood tracking, settings, and fitness
 
@@ -193,20 +192,6 @@ AZURE_OPENAI_ENDPOINT
 AZURE_OPENAI_KEY
 ```
 
-## API Routes
-
-| Route          | Method | Purpose                                 |
-| -------------- | ------ | --------------------------------------- |
-| `/`            | GET    | Check if the Flask backend is running   |
-| `/signup`      | POST   | Create a new user account               |
-| `/signin`      | POST   | Log in an existing user                 |
-| `/update_name` | POST   | Update the authenticated user's name    |
-| `/chat`        | POST   | Send a message to the AI mentor chatbot |
-| `/workouts`    | GET    | Retrieve workout data                   |
-| `/workouts`    | POST   | Add workout data                        |
-| `/Users`       | GET    | Retrieve user records                   |
-| `/Users`       | POST   | Add user records                        |
-
 ## Safety Note
 
 This project is designed for educational use and general wellbeing support. It should not be used as a substitute for therapy, counseling, medical treatment, crisis support, or professional advice.
@@ -226,22 +211,14 @@ Through this project, I practiced:
 * Implementing user authentication
 * Hashing passwords securely with bcrypt
 * Managing environment variables
-* Designing AI features for emotional support and wellbeing
 
 ## Future Improvements
 
 * Add stronger input validation
 * Improve session handling and authentication security
-* Add JWT-based authentication
 * Add crisis detection and safe escalation messaging
 * Improve chatbot guardrails
-* Add loading states and error messages in the frontend
-* Add unit tests for backend routes
-* Add frontend component tests
-* Improve mobile responsiveness
-* Add deployment instructions
-* Add screenshots and a short demo video
 
 ## Author
 
-Created by [Kakkooo02](https://github.com/Kakkooo02)
+Created by Kakkooo02
