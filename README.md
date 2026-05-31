@@ -1,4 +1,4 @@
-# GenAI Wellness App
+# Tees Wellness App
 
 GenAI Wellness App is a full-stack web application designed to support teenagers with emotional wellbeing, personal growth, mood reflection, and fitness recommendations. The app combines a React frontend with a Flask backend, Azure OpenAI chatbot support, Azure Cosmos DB storage, and user authentication.
 
