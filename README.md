@@ -198,6 +198,9 @@ This project is designed for educational use and general wellbeing support. It s
 
 If a user is in immediate danger or experiencing a crisis, they should contact emergency services or a qualified professional.
 
+## Demo Video
+https://www.youtube.com/watch?v=IuoUNEIuHpw
+
 ## What I Learned
 
 Through this project, I practiced:
