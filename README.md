@@ -31,9 +31,7 @@ This project was built to explore how generative AI can be used in a web applica
 | Backend            | Python, Flask             |
 | AI                 | Azure OpenAI              |
 | Database           | Azure Cosmos DB           |
-| Authentication     | bcrypt, Flask sessions    |
 | API communication  | REST API, Flask-CORS      |
-| Deployment support | Azure-ready configuration |
 
 ## Repository Structure
 
